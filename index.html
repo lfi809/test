@@ -129,12 +129,28 @@
         window.open('https://nachat.myconnectwise.net/customer/partnerId/535fc181aa8af35c985fff49?trackKey=install&n=1&q=CW-Support');
       }
     </script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'hhi1xzs',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
 
     <style type="text/css">
       
       body {
-        text-align: center; 
+        text-align: center;
       }
+      
+      body, h1, h2, h3, h4, h5, h6, p, a, li, td, label, input, div, span, .portlet-header, .portlet-content p, .portlet-content li, footer {
+		font-family: "myriad-pro-n4","myriad-pro-1","myriad-pro-2",helvetica,arial,sans-serif;
+	  }
+
       
       #content-frame {
 		width: 100%;
@@ -198,7 +214,7 @@
 
       *
       {
-        font-family: Arial;  
+        font-family: "myriad-pro-n4","myriad-pro-1","myriad-pro-2",helvetica,arial,sans-serif;  
         font-size: 12px;
       }
 
