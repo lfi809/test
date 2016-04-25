@@ -427,6 +427,100 @@
 
 
 
+      /*-----hover effect-----*/
+      .hvr-sweep-to-bottom-blue {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-bottom-blue:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #005f99;
+  border-radius: 5px;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-bottom-blue:hover, .hvr-sweep-to-bottom-blue:focus, .hvr-sweep-to-bottom-blue:active {
+  color: white;
+}
+.hvr-sweep-to-bottom-blue:hover:before, .hvr-sweep-to-bottom-blue:focus:before, .hvr-sweep-to-bottom-blue:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+      .hvr-sweep-to-bottom-orange {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-bottom-orange:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ea6d28;
+  border-radius: 5px;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-bottom-orange:hover, .hvr-sweep-to-bottom-orange:focus, .hvr-sweep-to-bottom-orange:active {
+  color: white;
+}
+.hvr-sweep-to-bottom-orange:hover:before, .hvr-sweep-to-bottom-orange:focus:before, .hvr-sweep-to-bottom-orange:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+
+
+
+
+
       /*--------- media queries ---------*/
       @media only screen and (max-width: 1460px)  {
         a.btnblue {
@@ -511,10 +605,10 @@
   <div class="infocontainer">
   <h3 class="white">Before you move forward with your installation, complete the checklists below if you have not already done so.</h3>
        <div id="btncontainer"> 
-          <a href="https://university.connectwise.com/University/PageView.aspx?short_name=workstation-checklist-for-2014.2" target="_blank" class="btn btnblue bgblue">
+          <a href="https://university.connectwise.com/University/PageView.aspx?short_name=workstation-checklist-for-2014.2" target="_blank" class="btn btnblue bgblue hvr-sweep-to-bottom">
           ConnectWise Internet Client Checklist
           </a>
-          <a href="https://university.connectwise.com/University/PageView.aspx?short_name=workstation-checklist-for-connectwise-web-version" target="_blank" class="btn btnblue bgblue">
+          <a href="https://university.connectwise.com/University/PageView.aspx?short_name=workstation-checklist-for-connectwise-web-version" target="_blank" class="btn btnblue bgblue hvr-sweep-to-bottom">
           ConnectWise Browser Version Checklist
           </a>
       </div>
@@ -578,7 +672,7 @@
                       <li>Save the <span class="bold CWFileNameForDisplay">ConnectWise-Internet-Client.msi</span> file to your desktop.</li>
                       <li>Double-click on the <span class="bold CWFileNameForDisplay">ConnectWise-Internet-Client.msi</span> file to complete the installation.</li>
                     </ul>
-                    <div id="cwInstallButton" class="btn bgorange btnorange"/>Install</div>
+                    <div id="cwInstallButton" class="btn bgorange btnorange hvr-sweep-to-bottom-orange"/>Install</div>
                     <div class="clear"></div>
               <p class="blue"><span class="bold">Note:</span> The 64-bit installs the client in the Program Files directory and the 32-bit installs the client in the Program Files (x86) directory. Both types of installations run in 32-bit mode.</p>
       </div>
@@ -699,7 +793,7 @@
                       <li>Click the <span class="bold">Install</span> button below and save the zipped folder to your desktop.</li>
                       <li>Extract the zipped folder and run <span class="bold">setup.exe</span> to complete the installation.</li>
                     </ul>
-                    <div id="download" class="btn bgorange btnorange"/>Install</div>
+                    <div id="download" class="btn bgorange btnorange hvr-sweep-to-bottom-orange"/>Install</div>
                     <div class="clear"></div>
               <p class="blue"><span class="bold">Note:</span>  To determine your current version, open the ConnectWise application and the version will display at the very top left corner of the application window.</p>
       </div>
@@ -731,7 +825,7 @@
                         </ul>
                       </li>
                     </ul>
-                    <div id="download" class="btn bgorange btnorange"/>Install</div>
+                    <div id="download" class="btn bgorange btnorange hvr-sweep-to-bottom-orange"/>Install</div>
                     <div class="clear"></div>
               <!--start accordion-->
               <div id="accordion">
@@ -829,7 +923,7 @@
                       <li>Log in with your ConnectWise University credentials.</li>
                       <li>The client will run in the system tray and allow you to set your availability and view support tickets.</li>
                     </ul>
-                    <div id="downloadchat" onclick="chatAssistInstallFile();"  class="btn bgorange btnorange" />Install</div>
+                    <div id="downloadchat" onclick="chatAssistInstallFile();"  class="btn bgorange btnorange hvr-sweep-to-bottom-orange" />Install</div>
                     <div class="clear"></div>
               
       </div>
