@@ -156,27 +156,8 @@
         margin: 0;
         padding: 0;
       }
-      
-      body, h1, h2, h3, h4, h5, h6, p, a, li, td, label, input, div, span, .portlet-header, .portlet-content p, .portlet-content li, footer {
-	  }
 
-      
-      #content-frame {
-		    width: 100%;
-	  }
-
-      .container {
-        padding-right:0px;
-        padding-left:0px;
-	  }
-
-      footer {
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-	  }
-
-      #download{
+      #download {
         display:none;
       }
 
@@ -189,7 +170,7 @@
         display: block;
       }
 
-      #cwInstallButton{
+      #cwInstallButton {
         display:none;
         cursor:pointer;
       }
@@ -197,19 +178,6 @@
       #requirecopy,
       #versionInstructions {
         display: none;
-      }
-
-      #chatAssistInstallButton {
-        cursor:pointer;
-      }
-
-      .full{
-        width: 100%;
-      }
-
-      .infocontainer {
-        float: left;
-        width: 80%;
       }
 
       #btncontainer {
@@ -233,6 +201,76 @@
         margin: 0 auto;
         display: table;
         text-align: left;
+      }
+
+
+
+
+      
+
+      /*-----typography-----*/
+
+      h1,
+      h2,
+      h3{
+      font-weight: 500;
+      }     
+
+      h1 {
+        color: #4d4d4d;
+        font-size:60px;
+        margin-top: 25px;   
+      }
+
+      h2 {
+        color:#ffffff;
+        font-size:36px;
+      }
+      
+       h3 {
+        color:#0067b1;
+        font-size:19px;
+        line-height: 26px;
+        margin: 0;
+      }
+
+      p,
+      label,
+      ul {
+        font-weight: 200;
+      }
+
+      ul {
+        margin: 15px 0 0 0;
+        padding: 0;
+        list-style-position: inside;
+      }
+
+      ul li {
+        margin-bottom: 7px;
+      }
+
+      * {
+        font-family: "myriad-pro-n4","myriad-pro-1","myriad-pro-2",helvetica,arial,sans-serif;  
+        font-size: 15px;
+        line-height: 21px;
+      }
+
+
+
+
+
+
+      /*-----classes-----*/
+
+      .container {
+        padding-right:0px;
+        padding-left:0px;
+      }
+
+      .infocontainer {
+        float: left;
+        width: 80%;
       }
 
       #accordion .ui-accordion-content {
@@ -370,131 +408,23 @@
         list-style-type: none;
         margin: 5px 0px 0px 45px;
       }
-
-      h1,
-      h2,
-      h3{
-      font-weight: 500;
-      }     
-
-      h1 {
-        color: #4d4d4d;
-        font-size:60px;
-        margin-top: 25px;   
-      }
-
-      h2 {
-        color:#ffffff;
-        font-size:36px;
-      }
-      
-       h3 {
-        color:#0067b1;
-        font-size:19px;
-        line-height: 26px;
-        margin: 0;
-      }
-
-      p,
-      label,
-      ul {
-        font-weight: 200;
-      }
-
-      ul {
-        margin: 15px 0 0 0;
-        padding: 0;
-        list-style-position: inside;
-      }
-
-      ul li {
-        margin-bottom: 7px;
-      }
-
-      * {
-        font-family: "myriad-pro-n4","myriad-pro-1","myriad-pro-2",helvetica,arial,sans-serif;  
-        font-size: 15px;
-        line-height: 21px;
-      }
-
-      Table4 > *
-      {
-        font-size:12px;
-      }
-
-      #mainFrame
-      {
-      	width: 100%;
-        margin: 0px auto; 
-      }
-      
-      #mandatorySection,
-      .optionalSection {
-      text-align: left;
-      }
-         
-      #mandatorySection {
-        margin:42px auto 0 3px;
-        padding-left:7px;
-        padding-right:7px;
-        border:1px solid #A8A8A8;
-      }
          
       .optionalSection
       {
         margin:0 auto 0 2px;
         padding-left:7px;
         padding-right: 7px;
+        text-align: left;
       }
 
-      .style1
-      {
-        width: 265px;
-      }
-
-      .style2
-      {
-        width: 259px;
-      }
-
-      .style3
-      {
-        width: 10px;
-      }
-
-      .style4
-      {
-        width: 600px;
-        float: left;
-      }
-
-      .style6
-      {
-        width: 600px;
-      }
-
-      #footer 
-      {
-        background:none repeat scroll 0 0 #3B52A2;
-        margin-left:2px;
-        text-align:center;
-      }
       .heading
       {
         font-size: 17px;
         color: #3B52A2;
       }
-        
-      #subHeading
-      {
-        font-size:13px;
-            
-      }
-      #checklists
-      {
-        margin:0; 
-        padding-top: 10px;        
-      }
+
+
+
 
 
       /*--------- media queries ---------*/
@@ -561,15 +491,6 @@
         margin: 5px 0px 0px 25px;
       }
   }
-
-
-
-    </style>
-
-    <style type="text/css">
-      .directions{
-        margin-right:320px;
-      }
     </style>
 
   </head>
