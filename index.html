@@ -13,7 +13,7 @@
     <!-- Back To Top END -->
 
     <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script language="javascript" type="text/javascript" src="/Support/JavaScript/IntegratorCookieUtility.js"></script>
     <script runat="server" language="javascript">
       function hasDotNet()
@@ -128,6 +128,14 @@
       function pseudoClickChatLink() {
         window.open('https://nachat.myconnectwise.net/customer/partnerId/535fc181aa8af35c985fff49?trackKey=install&n=1&q=CW-Support');
       }
+
+       $(function() {
+    $( "#accordion" ).accordion({
+      collapsible: true,
+      active: false,
+      heightStyle: "content"
+    });
+  });
     </script>
     <script>
         (function (d) {
@@ -145,6 +153,8 @@
       
       body {
         text-align: center;
+        margin: 0;
+        padding: 0;
       }
       
       body, h1, h2, h3, h4, h5, h6, p, a, li, td, label, input, div, span, .portlet-header, .portlet-content p, .portlet-content li, footer {
@@ -152,8 +162,7 @@
 
       
       #content-frame {
-		width: 100%;
-
+		    width: 100%;
 	  }
 
       .container {
@@ -171,13 +180,23 @@
         display:none;
       }
 
-      #outlook{
+      #outlook,
+      #outlook2 {
         display: none;
+      }
+
+      #outlook2016 {
+        display: block;
       }
 
       #cwInstallButton{
         display:none;
         cursor:pointer;
+      }
+
+      #requirecopy,
+      #versionInstructions {
+        display: none;
       }
 
       #chatAssistInstallButton {
@@ -187,35 +206,215 @@
       .full{
         width: 100%;
       }
+
+      .infocontainer {
+        float: left;
+        width: 80%;
+      }
+
+      #btncontainer {
+        margin: 0 auto;
+        width:90%;
+        display: table;
+        text-align: center;
+      }
+
+      #introsection {
+        width:70%;
+        padding: 30px 0px 50px 0px;
+        margin: 0 auto;
+        display: table;
+        text-align: left;
+      }
+
+      #optionalsection {
+        width:70%;
+        padding: 30px 0px 50px 0px;
+        margin: 0 auto;
+        display: table;
+        text-align: left;
+      }
+
+      #accordion .ui-accordion-content {
+        padding: 25px;
+        display: block;
+      }
+
+      .acc-sectiontitle {
+        padding: 10px 25px;
+        background: #0569b1;
+        margin-bottom: 0;
+        color: #ffffff;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 1px;
+      }
+
+      .section {
+        width:50%;
+        padding: 30px 0px 50px 0px;
+        margin: 0 auto;
+        display: table;
+        text-align: left;
+      }
+
+      .installsection {
+        width:100%;
+        padding: 30px 40px 50px 40px;
+        margin: 30px auto 0 auto;
+        display: table;
+        text-align: left;
+      }
       
+      .white {
+      color: #ffffff;
+      }
+
+      .bgwhite {
+        background: #ffffff;
+      }
+
+      .bgblue {
+        background: #0569B1;
+      }
+
+      .bgorange {
+        background: #F37D33;
+      }
+
+      .bggray {
+        background: #E6E6E6;
+      }
+
+      .blue {
+        color: #0569B1;
+      }
+
+      .white {
+        color: #ffffff;
+      }
+
+      .bold {
+        font-weight: 800;
+      }
+
+      .light {
+        font-weight: 200;
+      }
+
+      a.btn,
+      .btn {
+        padding: 10px;
+        color: #ffffff;
+        font-size: 14px;
+        border-radius: 5px;
+        text-decoration: none;
+        margin: 0 15px 0 0;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      a.btnblue {
+        width: 45%;
+        float: left;
+        margin-top: 40px;
+      }
+
+      .btnorange {
+        width: 111px;
+        margin-top: 20px;
+      }
+
+      .arrowwhite {
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #ffffff;
+        position: absolute;
+        left: 50%;
+      }
+
+      .arrowgray {
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #E6E6E6;
+        position: absolute;
+        left: 50%;
+      }
+
+      .left {
+        float:left;
+      }
+
+      .icon {
+        margin-right: 15px;
+        float: left;
+      }
+
+      .clear {
+        height: 20px;
+      }
+
+      .nomargintop {
+        margin-top: 0px;
+      }
+
+      .nomarginbottom {
+        margin-bottom: 0px;
+      }
+
+      ul.nobullet {
+        list-style-type: none;
+        margin: 5px 0px 0px 45px;
+      }
+
       h1,
       h2,
       h3{
-      font-weight: 600;
+      font-weight: 500;
       }     
 
-      h1
-      {
+      h1 {
         color: #4d4d4d;
-        font-size:60px;   
+        font-size:60px;
+        margin-top: 25px;   
       }
 
-      h2
-      {
+      h2 {
         color:#ffffff;
         font-size:36px;
       }
       
-       h3
-      {
+       h3 {
         color:#0067b1;
-        font-size:21px;
+        font-size:19px;
+        line-height: 26px;
+        margin: 0;
       }
 
-      *
-      {
+      p,
+      label,
+      ul {
+        font-weight: 200;
+      }
+
+      ul {
+        margin: 15px 0 0 0;
+        padding: 0;
+        list-style-position: inside;
+      }
+
+      ul li {
+        margin-bottom: 7px;
+      }
+
+      * {
         font-family: "myriad-pro-n4","myriad-pro-1","myriad-pro-2",helvetica,arial,sans-serif;  
-        font-size: 12px;
+        font-size: 15px;
+        line-height: 21px;
       }
 
       Table4 > *
@@ -228,30 +427,24 @@
       	width: 100%;
         margin: 0px auto; 
       }
-
-      #introSection {
-        border:1px solid #A8A8A8;
-        margin:-3px auto 0 3px;
-        padding-left:7px;
-        width:641px;
+      
+      #mandatorySection,
+      .optionalSection {
+      text-align: left;
       }
          
       #mandatorySection {
-        border:1px solid #A8A8A8;
         margin:42px auto 0 3px;
         padding-left:7px;
         padding-right:7px;
-        width:634px;
         border:1px solid #A8A8A8;
       }
          
       .optionalSection
       {
-        border:1px solid #A8A8A8;
         margin:0 auto 0 2px;
         padding-left:7px;
         padding-right: 7px;
-        width:635px;
       }
 
       .style1
@@ -285,7 +478,6 @@
         background:none repeat scroll 0 0 #3B52A2;
         margin-left:2px;
         text-align:center;
-        width:650px;
       }
       .heading
       {
@@ -303,6 +495,75 @@
         margin:0; 
         padding-top: 10px;        
       }
+
+
+      /*--------- media queries ---------*/
+      @media only screen and (max-width: 1460px)  {
+        a.btnblue {
+          display: block;
+          width: 60%;
+          margin: 15px auto 0 auto;
+          float: none;
+        }
+  }
+
+  @media only screen and (max-width: 885px)  {
+        .infocontainer {
+          margin: 25px auto 0;
+          width: 90%;
+          float: none;
+        }
+
+        .icon {
+          float: none;
+          margin: 0 auto;
+          display: block;
+          width: 20%;
+        }
+
+        .section {
+          width: 90%;
+        }
+
+        #introsection {
+          display: table;
+          margin: 0 auto;
+          padding: 30px 0 50px;
+          text-align: center;
+          width: 90%;
+        }
+
+        #introsection .icon {
+          width: 40%;
+        }
+
+        .infocontainer h3 {
+          text-align: left;
+        }
+
+        .installsection {
+          width: 80%;
+          padding: 30px 0 50px 0;
+        }
+
+        #optionalsection {
+          width: 100%;
+        }
+  }
+
+  @media only screen and (max-width: 731px)  {
+    .nomarginbottom {
+      margin-bottom: auto;
+    }
+
+    ul.nobullet {
+        list-style-type: none;
+        margin: 5px 0px 0px 25px;
+      }
+  }
+
+
+
     </style>
 
     <style type="text/css">
@@ -312,75 +573,50 @@
     </style>
 
   </head>
+
+
+
+
+
   <body alink="#3b52a2" vlink="#3b52a2" link="#3b52a2" >
    
-    <div id="mainFrame">
-      <h1>Workstation Installation</h1>
-      </table>
-        
+<div id="container">
 
-      <div id="introSection">
-        <br /><br />
-        <span class="heading">Workstation Installation</span>
-                                
-        <table cellspacing="0" cellpadding="0"  style="border-collapse: collapse;">
-      
-          <tr>
-            <td  class="style4"> 
-              <img src="http://university.connectwise.com/common/images/psa/psa_box2.jpg"  width="150" border="0" alt="PSA" align="right"  />
-                                
-              <br />
-                                
+<h1>Workstation Installation</h1>
 
-              Use this workstation installation checklist to set up and test the workstations.
-              <ul id="checklists">
-                <li style="padding: 5px 0px;"><span class="style5" style="text-decoration: underline;">
-                                                <a href="https://university.connectwise.com/University/PageView.aspx?short_name=workstation-checklist-for-2014.2" target="_blank">
-                                                  2014.2 and higher - Workstation Installation Checklist</a></span>
-                </li>
-                <li style="padding: 5px 0px;"><span class="style5" style="text-decoration: underline;">
-                                                <a href="https://university.connectwise.com/University/PageView.aspx?short_name=workstation-checklist-for-connectwise-web-version" target="_blank">
-                                                  ConnectWise Web Version Install Checklist</a></span>
-                </li>
-              </ul>
-              <br />
-            </td>
-          </tr>
-        </table>
+<div id="intro" class="bgorange">
+<div id="introsection">
+  <img src="http://connectwise-mktg.s3.amazonaws.com/install/icon-warning.svg" width="109" class="left icon">
+  <div class="infocontainer">
+  <h3 class="white">Before you move forward with your installation, complete the checklists below if you have not already done so.</h3>
+       <div id="btncontainer"> 
+          <a href="https://university.connectwise.com/University/PageView.aspx?short_name=workstation-checklist-for-2014.2" target="_blank" class="btn btnblue bgblue">
+          ConnectWise Internet Client Checklist
+          </a>
+          <a href="https://university.connectwise.com/University/PageView.aspx?short_name=workstation-checklist-for-connectwise-web-version" target="_blank" class="btn btnblue bgblue">
+          ConnectWise Browser Version Checklist
+          </a>
+      </div>
+      <!--close btncontainer-->
+      </div>
+      <!--close infocontainer-->
+</div>
+<!--close section-->
+</div>
+  <!--closeintro-->
 
-           
-      </div><!--End Intro Sec -->
 
-      <div id="mandatorySection">
-        <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td style="vertical-align: bottom; width: 450px;">
-              <span class="heading">Required Installations</span><br />
-              <span id="subHeading">Perform the following installations to complete your ConnectWise Install.</span>
-            </td>
-            <td style="vertical-align: bottom;">
-              <div id="supportBtn">
-                <div style="cursor: pointer;" onclick="window.open('https://nachat.myconnectwise.net/customer/partnerId/535fc181aa8af35c985fff49?trackKey=install&n=1&q=CW-Support');">
-                  <img src="https://university.connectwise.com/University/css/src/chat-button.png" alt="Support">
-                </div>
-              </div>
-            </td>
-          </tr>
-        </table>
-        <p>&nbsp;</p>
 
-        <table border="0" cellspacing="0" cellpadding="0" style="font-family: arial; font-size: 12px;">
-          <tr>
-            <td valign="top" style="padding-right:6px;">
-              <img src="http://university.connectwise.com/images/bullet-1.gif" border="0" width="27" height="27"
-                   alt=""/></td>
-            <td>
-              <img src="http://university.connectwise.com/images/email/psa/partner_newsletter/web_ready/ConnectWise-InternetClient-logo.png"
-                   align="right" alt="Internet Client" border="0"/><b>ConnectWise Internet Client</b><br />
-              <span class="directions">
-                Please install the ConnectWise Internet Client.
-              </span>
-              <script type="text/javascript">
+  <div class="block">
+<div class="section">
+  <img src="http://connectwise-mktg.s3.amazonaws.com/install/icon-1.svg" width="58" class="left icon">
+  <div class="infocontainer">
+  <h3 class="blue">REQUIRED: Install the ConnectWise Internet Client
+</h3>
+       <p>Please select your Operating System type:</p>
+
+       <!--for radio button functionality-->
+       <script type="text/javascript">
 
                 function chooseCwInstallFile() {
                   if ($('#OSBIT64').is(':checked'))
@@ -400,6 +636,7 @@
 
                   if ($('#OSBIT64').is(':checked') ||
                     $('#OSBIT32').is(':checked')) {
+                    $('#requirecopy').fadeIn('slow');
                     $('#cwInstallButton').fadeIn('slow', function() {
                       $('#cwInstallButton').click(function() {
                         chooseCwInstallFile();
@@ -408,117 +645,73 @@
                   }
                 }
               </script>
-
-            </td>
-          </tr>
-        </table>
-
-        <br />
-
-        <blockquote style="height:250px;">
-          <fieldset style="height:200px;">
-            <legend>ConnectWise Internet Client</legend>
-            <br>
-            <table width="100%" border="0">
-              <tr>
-                <td valign="top" style="padding-top:5px;">
-                  <div id="bitListItem" style="padding-left:15px;">
-                    <b>Confirm your Operating System type:</b>
-                    <br />
-                    <br />
+              <!--for radio button functionality-->
                     <input type="radio" id="OSBIT64" name="OSBIT" onclick="updateBitVersionAppearances()" />
                     <label for="OSBIT64">64-bit</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <input type="radio" id="OSBIT32" name="OSBIT" onclick="updateBitVersionAppearances()" />
                     <label for="OSBIT32">32-bit</label>
-                    <br />
-                  </div>
-                </td>
-              </tr>
-              <tr style="height: 21px;">
-                <td colspan="2">
-                  <img id="cwInstallButton" style="margin-left:20px;cursor:pointer;padding-top:10px;" src="http://university.connectwise.com/install/install.gif" width="45" height="19" border="0" alt=""/>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2">
-                  <p>
-                    <br/>
-                    <br/>
-                    <strong>NOTE</strong>: Selecting 64-bit will install the client in the Program Files directory, selecting 32-bit will install the client in
-                    the Program Files (x86) directory.  Both installs run in 32-bit mode.
-                  </p>
-                </td>
-              </tr>
-            </table>       
-          </fieldset>
+                    <ul id="requirecopy">
+                      <li>Click the <span class="bold">Install</span> button below after you have determined your Operating System type.</li>
+                      <li>Save the <span class="bold CWFileNameForDisplay">ConnectWise-Internet-Client.msi</span> file to your desktop.</li>
+                      <li>Double-click on the <span class="bold CWFileNameForDisplay">ConnectWise-Internet-Client.msi</span> file to complete the installation.</li>
+                    </ul>
+                    <div id="cwInstallButton" class="btn bgorange btnorange"/>Install</div>
+                    <div class="clear"></div>
+              <p class="blue"><span class="bold">Note:</span> The 64-bit installs the client in the Program Files directory and the 32-bit installs the client in the Program Files (x86) directory. Both types of installations run in 32-bit mode.</p>
+      </div>
+      <!--close section-->
+</div>
+<!--close block-->
 
-          <ul type="square">
-            <div id="instructionalListItems" style="padding-top:10px;">
+<div class="arrowwhite"></div>
 
-              <li>Click on the install button above for the version of ConnectWise you have chosen.</li>
-              <li>Save the <span class="CWFileNameForDisplay" style="font-weight:bold">ConnectWise-Internet-Client.msi</span> file to your desktop</li>
-              <li>Double click on the <span class="CWFileNameForDisplay" style="font-weight:bold">ConnectWise-Internet-Client.msi</span>
-                file to start the installation.</li>
-            </div>
-          </ul>
-        </blockquote>
 
-        <br />
-        <br />
-        <br />
-            
-        <table border="0" cellspacing="0" cellpadding="0" style="font-family: arial; font-size: 12px;">
-          <tr>
-            <td valign="top" style="padding-right:6px;">
-              <a name="outlookaddin"></a>
-              <img src="http://university.connectwise.com/images/bullet-2.gif" border="0" width="27" height="27"
-                   alt="" /></td>
-            <td>
-              <img src="http://university.connectwise.com/images/email/psa/partner_newsletter/web_ready/ConnectWise-Outlook-Addin-logo.png"
-                   align="right" border="0"/><b> ConnectWise Outlook Add-in</b><br />
-              ConnectWise can capture Outlook email as Tickets or Sales Activities. Select
-              your version of Outlook below and install the ConnectWise Outlook Add-in.
-            </td>
-          </tr>
-        </table>
 
-        <blockquote>
-          <fieldset>
-            <legend>ConnectWise Microsoft Outlook Add-in</legend>
-            <br />
-
-            <script>
+<div class="block bggray">
+<div class="section">
+  <img src="http://connectwise-mktg.s3.amazonaws.com/install/icon-2.svg" width="58" class="left icon">
+  <div class="infocontainer">
+  <h3 class="blue">REQUIRED: Install the ConnectWise Outlook Add-in</h3>
+      <p class="nomargintop">ConnectWise can capture Outlook email as Tickets or Sales Activities.</p>
+       <p class="nomarginbottom">First, select your ConnectWise version</p>
+       <!--for radio button functionality-->
+       <script>
                             
               function tryShowButton()
               {
-                if($('#CW1').is(':checked')){
-                  if($('#OL2007').is(':checked') || $('#OL2010').is(':checked')) {
+                if($('#CW7').is(':checked')){
+                  if($('#OL2016').is(':checked')) {
                     $('#download').fadeIn('slow', function() {
                       //Do nothing
                     });
                   }
-                }
+               $('#outlook').fadeIn('fast', function() {                                                    
+                  });
+               $('#outlook2').fadeOut('fast', function() {                                                    
+                  });
+                   }
 
-                if ($('#CW5').is(':checked') || $('#CW6').is(':checked') || $('#CW7').is(':checked')) {
-                  if($('#OL2007').is(':checked') || $('#OL2010').is(':checked')) {
+                if ($('#CW6').is(':checked')) {
+                  if($('#OL2007').is(':checked')) {
                     $('#download').fadeIn('slow', function() {
                       //Do nothing
                     });
                   }
-                  else{
-                    $('#download').fadeOut('slow', function() {
-                      //Do nothing
-                    });
-                  }
+                 $('#outlook2').fadeIn('fast', function() {                                                    
+                  });
+                  $('#outlook').fadeOut('fast', function() {                                                    
+                  }); 
                 }
+               
+                  
               }
      
               function getDownload()
               {
 
                 var cwSelected;
-                if ($('#CW5').is(':checked'))
-                  cwSelected = 5;
                 if ($('#CW6').is(':checked'))
                   cwSelected = 6;
                 if ($('#CW7').is(':checked'))
@@ -528,13 +721,9 @@
 
                 if($('#OL2007').is(':checked'))
                   olSelected = 1;
-                if($('#OL2010').is(':checked'))
+                if($('#OL2016').is(':checked'))
                   olSelected = 2;
 
-                if (cwSelected == 5 && olSelected == 1)
-                  window.location.href = 'http://university.connectwise.com/install/2014.3/CWOutlookAddIn2007Setup_2014.3.zip';
-                if (cwSelected == 5 && olSelected == 2)
-                  window.location.href = 'http://university.connectwise.com/install/2014.3/CWOutlookAddIn2010Setup_2014.3.zip';
 
                 if (cwSelected == 6 && olSelected == 1)
                   window.location.href = 'http://university.connectwise.com/install/2015.4/CWOutlookAddIn2007Setup_2015.4.zip';
@@ -549,150 +738,193 @@
                                     
               function showOutlook()
               {
-                if ($('#CW5').is(':checked') || $('#CW6').is(':checked') || $('#CW7').is(':checked')) {
-                  $("#OL2010Label").text("Outlook 2010/2013");
-                }else{
-                  $("#OL2010Label").text("Outlook 2010");
+                if ($('#CW7').is(':checked')) {
+                  $('#OL2010Label, #OL2016').fadeIn('slow', function() {
+                      //Do nothing
+                    });
                 }
-                $('#versionInstructions').fadeOut('fast', function(){
-                  $('#outlook').fadeIn('fast', function() {                                                    
+                if ($('#CW6').is(':checked')) {
+                  $('#OL2010Label, #OL2016').fadeOut('slow', function() {
+                      //Do nothing
+                    });
+                }
+                $('#versionInstructions').fadeIn('fast', function() {  $('#download').fadeIn('fast', function() {
+                      //Do nothing
+                    });                                                  
                   });
-                });
               }
 
             </script>
-     
-            <div id="olWizard">
-              <table border="0" width="100%">
-                <tr>
-                  <td width="50%">
-                    <div id="cw" style="padding-left:15px;border:0px solid red;">
-                      <b>Select your ConnectWise Version</b>
-                      <br />
-                      <br />
-                      <input type="radio" id="CW7" onclick="tryShowButton(); showOutlook();" name="cwVersion" value="7"> <label for="CW7">2016.1</label><br />
-                      <input type="radio" id="CW6" onclick="tryShowButton(); showOutlook();" name="cwVersion" value="6"> <label for="CW6">2015.4 - 2015.6</label><br />
-                      <input type="radio" id="CW5" onClick="tryShowButton(); showOutlook();" name="cwVersion" value="5"> <label for="CW5">2014.3 - 2015.3</label><br/>     
+              <!--for radio button functionality-->
+
+                      <input type="radio" id="CW7" onclick="tryShowButton(); " name="cwVersion" value="6"> <label for="CW7">2016.3 - 2016.2</label><br />
+                      <input type="radio" id="CW6" onClick="tryShowButton(); " name="cwVersion" value="5"> <label for="CW6">2016.1 - 2015.6</label>
+
+                      <div id="outlook">
+                      <p class="nomarginbottom">Now, select your Outlook version</p>
+                      <div id="outlook2016">
+                        <input type="radio" id="OL2016" onClick="tryShowButton(); showOutlook();" name="OutlookVersion" value="2016"> <label for="OL2016" id="OL2010Label">Outlook 2016</label>
+                      </div>
+                      <input type="radio" id="OL2007" onClick="tryShowButton(); showOutlook();" name="OutlookVersion" value="2007"> <label for="OL2007">Outlook 2013/2010</label><br>
                     </div>
-                  </td>
-                  <td width="50%">
-                    <div id="versionInstructions">
-                      <b>Note:</b>&nbsp;To determine your current version, open the ConnectWise application, the version will display at the very top left corner of the application window.<br />
+
+                    <div id="outlook2">
+                      <p class="nomarginbottom">Now, select your Outlook version</p>
+                      <input type="radio" id="OL2007" onClick="tryShowButton(); showOutlook();" name="OutlookVersion" value="2007"> <label for="OL2007">Outlook 2013/2010</label><br>
                     </div>
-                    <div id="outlook">
-                      <b>Select your Outlook Version</b>
-                      <br />
-                      <br />
-                      <input type="radio" id="OL2010" onClick="tryShowButton()" name="OutlookVersion" value="2010"> <label for="OL2010" id="OL2010Label">Outlook 2010</label><br>
-                      <input type="radio" id="OL2007" onClick="tryShowButton()" name="OutlookVersion" value="2007"> <label for="OL2007">Outlook 2007</label><br>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2" style="height:32px;">
-                    <img id="download" style="margin-left:20px;cursor:pointer;padding-top:10px;" src="http://university.connectwise.com/install/install.gif" onClick="getDownload()"width="45" height="19" border="0" alt=""/>
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </fieldset>
-          <ul type="square">
-            <li>Please make sure you have removed previous versions of ConnectWise Outlook Add-in and exited Microsoft Outlook prior to installation.</li>
-            <li>
-              <span>Click the install button for the version of ConnectWise you are running 
-                and save the zipped folder to your desktop
-              </span>
-            </li>
-            <li>Extract the zipped folder and run <b>setup.exe</b>.</li>
-            <li>Follow the directions on the setup program to progress through it.</li>
-            <li>Click close when installation is completed.</li>
+                    
+                    <ul id="versionInstructions">
+                      <li>Uninstall previous versions of the ConnectWise Outlook Add-in and close Outlook prior to installation.</li>
+                      <li>Click the <span class="bold">Install</span> button below and save the zipped folder to your desktop.</li>
+                      <li>Extract the zipped folder and run <span class="bold">setup.exe</span> to complete the installation.</li>
+                    </ul>
+                    <div id="download" class="btn bgorange btnorange"/>Install</div>
+                    <div class="clear"></div>
+              <p class="blue"><span class="bold">Note:</span>  To determine your current version, open the ConnectWise application and the version will display at the very top left corner of the application window.</p>
+      </div>
+      <!--close section-->
+</div>
+<!--close block-->
+
+<div class="arrowgray"></div>
+
+<!--connectwise mobile app-->
+<div class="block bgblue">
+  <div id="optionalsection">
+    <h2>Optional</h2>
+<div class="installsection bggray">
+  <img src="http://connectwise-mktg.s3.amazonaws.com/install/icon-phone.svg" width="58" class="left icon">
+  <div class="infocontainer">
+  <h3 class="blue">Install the ConnectWise Mobile App</h3>
+      <p class="nomargintop">The ConnectWise Mobile add-on gives you the power of ConnectWise anytime, anywhere so you can have instant access to contacts, tickets, and configurations.</p>
+       
+                    <p class="bold blue">Prerequisites</p>
+                    <ul>
+                      <li> To purchase a mobile license, contact Sales@ConnectWise.com if you have not already done so.</li>
+                      <li>Check out the Supported Versions page for accepted phones and operating systems.</li>
+                      <li>You must perform the following steps in ConnectWise before you download the mobile app:
+                        <ul class="nobullet">
+                          <li>Navigate to System > Members > drill into a Member.</li>
+                          <li>Select the Enable Mobile Edition check box from the Member Information section.</li>
+                          <li>Repeat the steps above for each Member that will be using the mobile app.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div id="download" class="btn bgorange btnorange"/>Install</div>
+                    <div class="clear"></div>
+              <!--start accordion-->
+              <div id="accordion">
+  <p class="acc-sectiontitle">Android</p>
+  <div class="bgwhite nomarginbottom">
+    <p class="nomargintop"><span class="bold blue">Adding the ConnectWise Mobile App</span></p>
+    <ul>
+      <li>On your phone, navigate to the <span class="bold">Google Play Store.</span></li>
+      <li>Search for <span class="bold">ConnectWise Mobile</span>, then click <span class="bold">Install.</span></li>
+      <li>Tap the ConnectWise Mobile icon after it has installed and complete the following fields:
+          <ul class="nobullet">
+          <li><span class="bold">Site</span> - This is your company established ConnectWise site name.</li>
+          <li>
+            <ul class="nobullet">
+              <li><span class="blue"><span class="bold">Note:</span> Do not use "http://" or "https://" when entering your site.</span></li>
+            </ul>
+          </li>
+          <li><span class="bold">Company</span> - This is your company name.</li>
+          <li><span class="bold">Member</span> - Your member ID.</li>
+          <li><span class="bold">Password</span> - Application password.</li>
+          <li>Tap <span class="bold">Login</span>.</li>
           </ul>
-        </blockquote>
-        <br />
-        <br />
-      </div><!--End Mandatory Sec -->
-      <br />
-      <br />
-      <br />
-                      
-      <div class="optionalSection">
-        <br />
-        <br />
-            <span class="heading">Optional Installations</span><br /><br />
-            <table border="0" width="620px" cellspacing="0" cellpadding="0" style="font-family: arial; font-size: 12px;">
-                <tr>
-                <td valign="top" style="padding-right:6px;">
-                    <img src="http://university.connectwise.com/images/bullet-3.gif" border="0" width="27" height="27"
-                        alt=""/></td>
-                <td class="style6">
-                    <img src="http://university.connectwise.com/images/content/CW-Mobile-icon.png"
-                        align="right" border="0" height="60" width="175" style="float: right;"/><b> ConnectWise Mobile</b><br />
-                    The ConnectWise Mobile add-on gives users <b>the power of ConnectWise anytime, anywhere from the palm of their hands.</b> Field engineers have instant access to contacts, tickets and configurations without having to open their laptops.  It's much easier and faster to manage accounts as well as keep tickets and time up-to-date. </td>
-                </tr>
-            </table>
-          <blockquote>
-              <fieldset>
-                  <legend>ConnectWise Mobile</legend>
-                  <br />
-                  &nbsp;
-                  <a href="http://university.connectwise.com/install/mobile">Click Here to Download the ConnectWise Mobile Applications</a><br />
-                  <br />
-              </fieldset>
-          </blockquote>
-
-          <br />
-          <br />
-          <br />
-
-          <table border="0" cellspacing="0" cellpadding="0" style="font-family: arial; font-size: 12px;">
-              <tr>
-                  <td valign="top" style="padding-right:6px;">
-                      <img src="http://university.connectwise.com/images/bullet-4.gif" border="0" width="27" height="27" alt="" />
-                  </td>
-                  <td>
-                      <img src="http://university.connectwise.com/images/email/psa/partner_newsletter/web_ready/ChatAssist.png"
-                           align="right" alt="Internet Client" border="0" /><b>ConnectWise ChatAssist</b><br />
-                      <span class="directions">
-                          Install the ChatAssist desktop client for ConnectWise Support. ChatAssist allows you to easily chat on new and
-                          existing tickets with Support, improving your support experience. The desktop client also allows you to see when
-                          your assigned Support Consultant is available, making it quick to resolve issues.
-                      </span>
-                      <script type="text/javascript">
-
-                          function chatAssistInstallFile() {
-                              window.location.href = 'http://university.connectwise.com/install/ConnectWiseSupport.msi';
-                          }
-
-                      </script>
-                  </td>
-              </tr>
-          </table>
-
-          <br />
-
-          <blockquote style="height:100px;">
-              <div>
-                  <img id="chatAssistInstallButton" style="margin-left: 28px;" src="http://university.connectwise.com/install/install.gif"
-                       onclick="chatAssistInstallFile();" width="45" height="19" border="0" alt="" />
-              </div>
-              <ul type="square" id="instructionalListItems" style="padding-top:10px;">
-                  <li>Click on the install button</li>
-                  <li>Save the ConnectWiseSupport.msi file to your desktop</li>
-                  <li>Double click on the ConnectWiseSupport.msi file to start and complete the installation</li>
-                  <li>Log in using your ConnectWise University credentials</li>
-                  <li>The client will run in the system tray and allow you to set your availability and view support tickets</li>
-              </ul>
-          </blockquote>
-        <br />
-        <br />
+        </li>
+    </ul>
+  </div>
+  <p class="acc-sectiontitle">iPhone</p>
+  <div class="bgwhite nomarginbottom">
+    <p class="nomargintop"><span class="bold blue">Adding the ConnectWise Mobile App</span></p>
+    <ul>
+      <li>On your phone, navigate to the <span class="bold">App Store.</span></li>
+      <li>Search for <span class="bold">ConnectWise Mobile</span>, then click <span class="bold">Get.</span></li>
+      <li>Tap the ConnectWise Mobile icon after it has installed and complete the following fields:
+          <ul class="nobullet">
+          <li><span class="bold">Site</span> - This is your company established ConnectWise site name.</li>
+          <li>
+            <ul class="nobullet">
+              <li><span class="blue"><span class="bold">Note:</span> Do not use "http://" or "https://" when entering your site.</span></li>
+            </ul>
+          </li>
+          <li><span class="bold">Company</span> - This is your company name.</li>
+          <li><span class="bold">Member</span> - Your member ID.</li>
+          <li><span class="bold">Password</span> - Application password.</li>
+          <li>Tap <span class="bold">Login</span>.</li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+  <p class="acc-sectiontitle">Windows</p>
+  <div class="bgwhite nomarginbottom">
+    <p class="nomargintop"><span class="bold blue">Adding the ConnectWise Mobile App</span></p>
+    <ul>
+      <li>On your phone, navigate to the <span class="bold">Microsoft Store.</span></li>
+      <li>Search for <span class="bold">ConnectWise Mobile</span>, then click <span class="bold">Install.</span></li>
+      <li>• Tap the ConnectWise Mobile icon after it has installed and complete the following fields:
+          <ul class="nobullet">
+          <li><span class="bold">Site</span> - This is your company established ConnectWise site name.</li>
+          <li>
+            <ul class="nobullet">
+              <li><span class="blue"><span class="bold">Note:</span> Do not use "http://" or "https://" when entering your site.</span></li>
+            </ul>
+          </li>
+          <li><span class="bold">Company</span> - This is your company name.</li>
+          <li><span class="bold">Member</span> - Your member ID.</li>
+          <li><span class="bold">Password</span> - Application password.</li>
+          <li>Tap <span class="bold">Login</span>.</li>
+          </ul>
+        </li>
+    </ul>
+  </div>
+</div>
+              <!--close accordion-->
       </div>
+      <!--close section-->
+    </div>
+    <!--close optionalsection-->
+    <!--chat assist-->
+<div class="installsection bggray">
+  <img src="http://connectwise-mktg.s3.amazonaws.com/install/icon-chatassist.svg" width="58" class="left icon">
+  <div class="infocontainer">
+  <h3 class="blue">Install the ConnectWise ChatAssist Feature</h3>
+      <p class="nomargintop">ChatAssist allows you to easily chat on new and existing tickets with ConnectWise Support.</p>
+          <script type="text/javascript">
 
-      <div id="footer">
-        <font face="Arial, Helvetica, sans-serif" size="1" color="white">&copy; <script type="text/javascript">var d = new Date(); var n = d.getFullYear(); document.write(n);</script> ConnectWise.
-          All rights reserved.</font>
+             function chatAssistInstallFile() {
+               window.location.href = 'http://university.connectwise.com/install/ConnectWiseSupport.msi';
+              }
+
+          </script>
+       
+                    <ul>
+                      <li>Click the <span class="bold">Install</span> button below.</li>
+                      <li>Save the <span class="bold">ConnectWiseSupport.msi</span> file to your desktop.</li>
+                      <li>Double-click on the <span class="bold">ConnectWiseSupport.msi</span> file to complete the installation.
+                      </li>
+                      <li>Log in with your ConnectWise University credentials.</li>
+                      <li>The client will run in the system tray and allow you to set your availability and view support tickets.</li>
+                    </ul>
+                    <div id="downloadchat" onclick="chatAssistInstallFile();"  class="btn bgorange btnorange" />Install</div>
+                    <div class="clear"></div>
+              
       </div>
-   
-    </div><!--End Main Frame -->
+      <!--close section-->
+<!--chat assist-->
+</div>
+<!--close block-->
+<!--connectwise mobile app-->
+
+
+
+
+
+
+</div>
+<!--close container-->
 
   </body>
 </html>
